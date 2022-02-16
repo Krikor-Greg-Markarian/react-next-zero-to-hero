@@ -1,13 +1,19 @@
-import React from "react";
 import cn from "classnames";
-const ComponentA = () => {
+import React, { useState } from "react";
+const ComponentA = (props) => {
+  const [isClicked, setIsClicked] = useState(false);
   return (
     <button
-      className={cn(
-        "bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-      )}
+      onClick={() => {
+        props.onClick();
+        setIsClicked(!isClicked);
+      }}
+      className={cn(props.className)}
+      className={cn("border-2 p-1 ml-12 mt-4", {
+        "bg-red-300": isClicked,
+      })}
     >
-      Click Me
+      {props.buttonName ?? "dont forget to put name of the button "}
     </button>
   );
 };
