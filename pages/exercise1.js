@@ -23,8 +23,8 @@ const exercise1 = () => {
         />
       </div>
 
-      <div>
-        <p>you Clicked {count}</p>
+      <div className={cn("text-center pt-2")}>
+        <div>you clicked {count} times</div>
 
         <ComponentA buttonName='Click Me' onClick={() => setCount(count + 1)} />
       </div>
