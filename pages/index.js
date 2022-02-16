@@ -11,13 +11,13 @@ export default function Home() {
 
       <main>
         <li>
-          <Link href='/'>
-            <a>exercise-1</a>
+          <Link href='exercise1'>
+            <a>exercise1</a>
           </Link>
         </li>
         <li>
-          <Link href='/'>
-            <a>exercise-2</a>
+          <Link href='exercise2'>
+            <a>exercise2</a>
           </Link>
         </li>
       </main>
