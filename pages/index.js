@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import cn from "classnames";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,7 +9,18 @@ export default function Home() {
         <title>React next zero to hero</title>
       </Head>
 
-      <main></main>
+      <main>
+        <li>
+          <Link href='/'>
+            <a>exercise-1</a>
+          </Link>
+        </li>
+        <li>
+          <Link href='/'>
+            <a>exercise-2</a>
+          </Link>
+        </li>
+      </main>
 
       <footer></footer>
     </div>
