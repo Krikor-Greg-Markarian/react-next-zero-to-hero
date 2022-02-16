@@ -3,7 +3,8 @@ import cn from "classnames";
 import React, { useState } from "react";
 const exercise1 = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [count, setCount] = useState(0);
+  const [countIncrement, setCountIncrement] = useState(0);
+  const [countDecrement, setCountDecrement] = useState(0);
   return (
     <div>
       <div className={cn("flex justify-center items-center")}>
@@ -24,9 +25,22 @@ const exercise1 = () => {
       </div>
 
       <div className={cn("text-center pt-2")}>
-        <div>you clicked {count} times</div>
+        <div>increments the counter</div>
+        <div>you clicked {countIncrement} times</div>
 
-        <ComponentA buttonName='Click Me' onClick={() => setCount(count + 1)} />
+        <ComponentA
+          buttonName='Click Me'
+          onClick={() => setCountIncrement(countIncrement + 1)}
+        />
+      </div>
+      <div className={cn("text-center pt-2")}>
+        <div>decrements the counter</div>
+        <div>you clicked {countDecrement} times</div>
+
+        <ComponentA
+          buttonName='Click Me'
+          onClick={() => setCountDecrement(countDecrement - 1)}
+        />
       </div>
     </div>
   );
