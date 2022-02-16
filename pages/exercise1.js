@@ -3,8 +3,14 @@ import cn from "classnames";
 import React, { useState } from "react";
 const exercise1 = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [countIncrement, setCountIncrement] = useState(0);
-  const [countDecrement, setCountDecrement] = useState(0);
+  const [countIncrement, setCountIncrement] = useState(1);
+  const [countDecrement, setCountDecrement] = useState(5);
+
+  if (countDecrement === 0) {
+    console.log("We're at the beginning!");
+    alert("We're at the beginning!");
+  }
+
   return (
     <div>
       <div className={cn("flex justify-center items-center")}>
